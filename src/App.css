@@ -1,3 +1,7 @@
+body {
+  background-color: #fff1e6;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #333;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04aa6d;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li {
+  border-right: 1px solid #bbb;
+}
+
+#home-link {
+  display: block;
+  padding: 8px;
+  background-color: #333;
+}
+#menu-link {
+  display: block;
+  padding: 8px;
+  background-color: #333;
+}
+#invoice-link {
+  display: block;
+  padding: 8px;
+  background-color: #333;
+}
+#login-link {
+  display: block;
+  padding: 8px;
+  background-color: #333;
+}
+
+.header {
+  margin-left: 1.5rem;
+  color: #fff1e6;
 }
