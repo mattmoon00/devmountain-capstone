@@ -23,6 +23,7 @@ function Menu() {
     e.preventDefault();
     const newItem = e.target.value;
     setMenuList([...menuList, newItem]);
+    axios.post("http://localhost:5432/menu", { menuList });
     // setMenuItem(newItem);
   }
 

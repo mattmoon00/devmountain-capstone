@@ -16,3 +16,4 @@ INSERT INTO tables(
 ) values (
     'table 1'
 ), ('table 2');
+

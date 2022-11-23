@@ -5,6 +5,7 @@ import Menu from "./components/menu/Menu";
 import Invoice from "./components/invoice/Invoice";
 import Login from "./components/login/Login";
 
+
 function App() {
   return (
     <div className="App">
@@ -13,12 +14,14 @@ function App() {
           <li id="home-link">
             <Link to="/">Home</Link>
           </li>
-          <li id="menu-link">
-            <Link to="/menu">Menu</Link>
-          </li>
-          <li id="invoice-link">
-            <Link to="/invoice">Invoice</Link>
-          </li>
+          <div className="nav-visible">
+            <li id="menu-link">
+              <Link to="/menu">Menu</Link>
+            </li>
+            <li id="invoice-link">
+              <Link to="/invoice">Invoice</Link>
+            </li>
+          </div>
           <li id="login-link">
             <Link to="/login">Login</Link>
           </li>

@@ -1,31 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
+import axios from "axios";
 
 function Login() {
   const [name, setName] = useState("");
   const [uname, setUname] = useState("");
   const [pword, setPword] = useState("");
 
-  const Employee = {
-    id: 12345,
-    password: "abcde",
-  };
-
   function handleInput(e) {
     setName(e.target.value);
   }
 
-  function authenticate() {
-    if (uname == Employee.id && pword === Employee.password) {
-      alert("Success! Logged in.");
-    } else {
-      alert("Invalid Employee ID and/or password");
-    }
-  }
+  const cookie = document.cookie;
 
   function handleSubmit(e) {
-    authenticate();
     e.preventDefault();
+    axios
+      .put("http://localhost:5432/login", {
+        name: name,
+        pword: pword,
+      })
+      .then((res) => {
+        console.log("signed in");
+        console.log(res.data);
+        //navigate away using useNavigate()
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
     setUname("");
     setPword("");
   }
